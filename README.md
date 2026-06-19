@@ -5,7 +5,7 @@
 - Benjamin Cerda: Desarrollo del frontend (HTML, Bootstrap), integracion de la API con JavaScript (fetch/async-await), manipulacion del DOM y validaciones de formularios.
 
 ## 2. Descripcion del Proyecto
-GameReview es una plataforma web del sector de entretenimiento que permite a los usuarios visualizar resenas de videojuegos clasificados por genero y nota. Resuelve el problema de la organizacion de datos al contar con un panel de administracion centralizado para gestionar el catalogo completo.
+GameReview es una plataforma web del sector de entretenimiento que permite a los usuarios visualizar reseñas de videojuegos clasificados por genero y nota. Resuelve el problema de la organizacion de datos al contar con un panel de administracion centralizado para gestionar el catalogo completo.
 
 ## 3. Requisitos Previos
 - Node.js (Version 18 o superior recomendada).
