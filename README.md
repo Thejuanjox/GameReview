@@ -10,7 +10,7 @@ GameReview es una plataforma web del sector de entretenimiento que permite a los
 ## 3. Requisitos previos
 - Node.js (Version 18 o superior recomendada).
 - XAMPP (Para ejecutar los servicios de Apache y MySQL).
-- Navegador web moderno.
+- Navegador web.
 
 ## 4. Instalacion paso a paso
 1. Clonar o descargar el proyecto en el equipo local.
