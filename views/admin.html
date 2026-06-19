@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="es" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Panel de administracion</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light">
+
+<nav class="navbar navbar-dark bg-danger mb-4">
+    <div class="container d-flex justify-content-between">
+        <span class="navbar-brand mb-0 h1">Panel Admin - GameReview</span>
+        <button id="btn-logout" class="btn btn-dark border-white">Cerrar sesion</button>
+    </div>
+</nav>
+
+<div class="container" style="max-width: 1100px;">
+    <div class="card bg-secondary bg-opacity-25 border-secondary mb-4">
+        <div class="card-body">
+            <h5 class="card-title mb-3" id="titulo-form">Registrar Juego</h5>
+            <input type="hidden" id="juego-id">
+            
+            <div class="row g-3">
+                <div class="col-md-4">
+                    <label class="form-label text-light fw-bold">Titulo del Videojuego</label>
+                    <input type="text" id="input-titulo" class="form-control bg-dark text-light border-secondary" placeholder="Ej: Super Mario Odyssey">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label text-light fw-bold">Genero principal</label>
+                    <select id="input-genero" class="form-select bg-dark text-light border-secondary">
+                        <option value="">Seleccione un genero...</option>
+                        <option value="Accion">Accion</option>
+                        <option value="Aventura">Aventura</option>
+                        <option value="RPG">RPG (Rol)</option>
+                        <option value="Shooter">Shooter (Disparos)</option>
+                        <option value="Plataformas">Plataformas</option>
+                        <option value="Deportes">Deportes</option>
+                        <option value="Carreras">Carreras</option>
+                        <option value="Lucha">Lucha</option>
+                        <option value="Terror">Terror / Survival</option>
+                        <option value="Estrategia">Estrategia</option>
+                    </select>
+                </div>
+                <div class="col-md-2">
+                    <label class="form-label text-light fw-bold">Puntuacion (1-10)</label>
+                    <input type="number" step="0.1" min="1" max="10" id="input-calificacion" class="form-control bg-dark text-light border-secondary" placeholder="Ej: 9.5">
+                </div>
+                <div class="col-md-3">
+                    <label class="form-label text-light fw-bold text-nowrap">Fecha de lanzamiento</label>
+                    <input type="date" id="input-fecha" class="form-control bg-dark text-light border-secondary">
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label text-light fw-bold">URL de la imagen (Portada)</label>
+                    <input type="text" id="input-imagen" class="form-control bg-dark text-light border-secondary" placeholder="Ej: https://ejemplo.com/portada-juego.jpg">
+                </div>
+                <div class="col-md-12">
+                    <label class="form-label text-light fw-bold">Analisis / Reseña del juego</label>
+                    <textarea id="input-resena" class="form-control bg-dark text-light border-secondary" placeholder="Ej: Un titulo revolucionario con exelente jugabilidad..." rows="2"></textarea>
+                </div>
+                <div class="col-md-12 d-flex justify-content-end gap-2 mt-3">
+                    <button id="btn-cancelar" class="btn btn-secondary">Cancelar</button>
+                    <button id="btn-guardar" class="btn btn-success">Guardar registro</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="table-responsive">
+        <table class="table table-dark table-hover table-bordered border-secondary align-middle">
+            <thead class="table-active">
+                <tr>
+                    <th>ID</th>
+                    <th>Titulo</th>
+                    <th>Genero</th>
+                    <th>Puntuacion</th>
+                    <th>Lanzamiento</th>
+                    <th class="text-end">Acciones</th>
+                </tr>
+            </thead>
+            <tbody id="cuerpo-tabla"></tbody>
+        </table>
+    </div>
+</div>
+
+<template id="plantilla-fila">
+    <tr>
+        <td class="col-id"></td>
+        <td class="col-titulo fw-bold"></td>
+        <td class="col-genero"></td>
+        <td class="col-nota"></td>
+        <td class="col-fecha"></td>
+        <td class="text-end">
+            <button class="btn btn-warning btn-sm me-1 btn-editar">Editar</button>
+            <button class="btn btn-danger btn-sm btn-eliminar">Eliminar</button>
+        </td>
+    </tr>
+</template>
+
+<script src="/js/admin.js"></script>
+</body>
+</html>
