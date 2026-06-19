@@ -1,4 +1,4 @@
-# GameReview - Sistema de Resenas de Videojuegos
+# GameReview - Sistema de Reseñas de Videojuegos
 
 ## 1. Integrantes del Grupo
 - Juan Garay: Desarrollo del backend (Node.js, Express), configuracion de la base de datos MySQL, estructuracion del patron MVC y creacion de la API REST.
